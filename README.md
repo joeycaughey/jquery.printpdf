@@ -13,5 +13,7 @@ PrintPDF.print(html);
 There are a few configuration settings in the Javascript.
 
 {API_HOSTNAME} - The End point of the API print function
+
 {ASSET_BASE} - The base URL of your site that containts CSS and images.
+
 {FOOTER_HTML} -  Any Footer setup you wish to configure.
