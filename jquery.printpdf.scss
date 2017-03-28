@@ -1,0 +1,54 @@
+html {
+    height: auto !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.show-only-on-print {
+    display: none;
+}
+
+h2.show-only-on-print {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+body {
+    &.printing {
+        overflow: auto;
+        height: auto;
+        * {
+            overflow: visible !important;
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        div.page {
+            height: 100%;
+            page-break-inside: avoid;
+            &:before {
+                display: block;
+                clear: both;
+                page-break-before: always;
+            }
+        }
+        .show-only-on-print {
+            display: block;
+        }
+        h2 {
+            font-size: 40px;
+            line-height: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        footer {
+            > p {
+                text-align: center;
+            }
+        }
+    }
+}
